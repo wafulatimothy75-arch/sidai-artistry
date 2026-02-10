@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - SIDAI Artistry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2cc40a411c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="models/SIDAI ARTISTRY-1.png" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="models/shopping_bag_24dp_555_FILL0_wght400_GRAD0_opsz24.png" width="30px" height="30px"
+                color="#555">
+            <img src="models/Screenshot 2026-02-06 233208.jpg" class="menu-icon" onclick="menutogggle()">
+        </div>
+    </div>
+
+    <!-----------Single Products Details----------->
+
+<!--------cart items details----------->
+    <div class="small-container">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="kikoi/8774.jpg">
+                        <div>
+                            <p>Kikoi</p>
+                            <small>Price: $30.00</small>
+                            <br>
+                            <a href="products.html">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="earings/IMG_8586.jpg">
+                        <div>
+                            <p>Earings</p>
+                            <small>Price: $30.00</small>
+                            <br>
+                            <a href="products.html">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="rings/IMG_8615.jpg">
+                        <div>
+                            <p>Ring</p>
+                            <small>Price: $30.00</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+
+           <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="models/IMG-20260129-WA0060.png">
+                        <div>
+                            <p>Arm-Cuffs</p>
+                            <small>Price: $60.00</small>
+                            <br>
+                            <a href="products.html">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr> 
+
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$200.00</td>
+                </tr>
+                 <tr>
+                    <td>Tax</td>
+                    <td>$35.00</td>
+                </tr>
+                 <tr>
+                    <td>Total</td>
+                    <td>$235.00</td>
+                </tr>
+
+
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Andriod and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="models/Screenshot 2026-02-06 225341.jpg" width="120px">
+                        <img src="models/Screenshot 2026-02-06 225421.jpg">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="models/SIDAI ARTISTRY-1.png" width="100px">
+                    <p>Our Purpose Is to showcase the work of East African artisans and ensure the livelihoods of the
+                        communities are improved through fair and ethical trading.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2026 - Sidai Artistry</p>
+        </div>
+    </div>
+
+
+    <!-----------js for toggle menu----------->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+
+        menuItems.style.maxHeight = "0px";
+
+        function menutogggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+ <!-----------js for product gallery----------->
+    <script>
+
+        var ProductImg = document.getElementById("ProductImg");
+          var smallImg = document.getElementsByClassName("small-img");
+
+          smallImg[0].onclick = function()
+          
+          {
+            ProductImg.src = smallImg[0].src
+          }
+
+          smallImg[1].onclick = function()
+          
+          {
+            ProductImg.src = smallImg[1].src
+          }
+
+          smallImg[2].onclick = function()
+          
+          {
+            ProductImg.src = smallImg[2].src
+          }
+
+          smallImg[3].onclick = function()
+          
+          {
+            ProductImg.src = smallImg[3].src
+          }
+
+
+    </script>
+</body>
+
+</html>
